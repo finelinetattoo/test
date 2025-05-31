@@ -10,9 +10,6 @@
     "test": "ng test",
     "serve:ssr": "node dist/proyecto-for-vercel/server/server.mjs"
   },
-  "engines": {
-    "node": ">=18"
-  },
   "private": true,
   "dependencies": {
     "@angular/animations": "^19.0.0",
