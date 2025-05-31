@@ -1,17 +1,9 @@
 {
   "version": 2,
-  "routes": [
+  "rewrites": [
     {
-      "src": "/(.*\\.(?:js|css|ico|png|jpg|jpeg|webp|svg|woff2?|ttf|map|json))",
-      "headers": {
-        "Cache-Control": "public, max-age=31536000, immutable",
-        "Content-Type": "application/javascript"
-      },
-      "dest": "/main-XYZ.js"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "dist/proyecto-for-vercel/server/server.mjs"
+      "source": "/(.*)",
+      "destination": "/dist/proyecto-for-vercel/server/server.mjs"
     }
   ]
 }
