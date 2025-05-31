@@ -17,12 +17,12 @@ export const routes: Routes = [
     path: 'recomendaciones',
     component: RecomendacionesComponent,
   },
-  {
-    path: 'admin',
-    component: AdminComponent,
-  },
-  {
-    path: '**',
-    component: AdminComponent,
-  },
+  // {
+  //   path: 'admin',
+  //   component: AdminComponent,
+  // },
+  // {
+  //   path: '**',
+  //   component: AdminComponent,
+  // },
 ];
