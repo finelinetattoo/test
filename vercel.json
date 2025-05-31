@@ -2,12 +2,32 @@
   "version": 2,
   "rewrites": [
     {
-      "source": "/(.*\\.(?:js|css|ico|png|jpg|jpeg|webp|svg|woff2?|ttf|map|json))",
+      "source": "/(.*\\.(js|mjs|css|ico|png|jpg|jpeg|webp|svg|woff2?|ttf|map|json))",
       "destination": "/dist/proyecto-for-vercel/browser/$1"
     },
     {
       "source": "/(.*)",
       "destination": "/dist/proyecto-for-vercel/server/server.mjs"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*\\.js)",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/javascript"
+        }
+      ]
+    },
+    {
+      "source": "/(.*\\.mjs)",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/javascript"
+        }
+      ]
     }
   ]
 }
