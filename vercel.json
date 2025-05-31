@@ -1,0 +1,9 @@
+{
+  "version": 2,
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "dist/proyecto-for-vercel/server/server.mjs"
+    }
+  ]
+}

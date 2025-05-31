@@ -1,13 +1,17 @@
 {
   "name": "proyecto-for-vercel",
   "version": "0.0.0",
+  "type": "module",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:proyecto-for-vercel": "node dist/proyecto-for-vercel/server/server.mjs"
+    "serve:ssr": "node dist/proyecto-for-vercel/server/server.mjs"
+  },
+  "engines": {
+    "node": ">=18"
   },
   "private": true,
   "dependencies": {
