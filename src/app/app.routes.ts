@@ -1,28 +1,30 @@
 import { Routes } from '@angular/router';
-import { EstudioComponent } from './pages/estudio.component';
-import { RecomendacionesComponent } from './pages/recomendaciones.component';
-import { AdminComponent } from './pages/admin.component';
-import { HomeComponent } from './pages/home.component';
 
 export const routes: Routes = [
   {
     path: '',
-    component: HomeComponent,
+    loadComponent: () =>
+      import('./pages/home.component').then((m) => m.HomeComponent),
   },
   {
     path: 'estudio',
-    component: EstudioComponent,
+    loadComponent: () =>
+      import('./pages/estudio.component').then((m) => m.EstudioComponent),
   },
   {
     path: 'recomendaciones',
-    component: RecomendacionesComponent,
+    loadComponent: () =>
+      import('./pages/recomendaciones.component').then(
+        (m) => m.RecomendacionesComponent
+      ),
   },
   {
     path: 'admin',
-    component: AdminComponent,
+    loadComponent: () =>
+      import('./pages/admin.component').then((m) => m.AdminComponent),
   },
   {
     path: '**',
-    component: AdminComponent,
+    redirectTo: '',
   },
 ];
