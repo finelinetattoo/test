@@ -2,6 +2,13 @@
   "version": 2,
   "routes": [
     {
+      "src": "/(.*\\.(js|css|ico|png|jpg|jpeg|webp|svg|woff2?|ttf|map|json))",
+      "headers": {
+        "Cache-Control": "public, max-age=31536000, immutable"
+      },
+      "dest": "/dist/proyecto-for-vercel/browser/$1"
+    },
+    {
       "src": "/(.*)",
       "dest": "dist/proyecto-for-vercel/server/server.mjs"
     }
