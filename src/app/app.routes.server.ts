@@ -13,10 +13,10 @@ export const serverRoutes: ServerRoute[] = [
     path: 'recomendaciones',
     renderMode: RenderMode.Prerender,
   },
-  // {
-  //   path: 'admin',
-  //   renderMode: RenderMode.Server,
-  // },
+  {
+    path: 'admin',
+    renderMode: RenderMode.Server,
+  },
   // {
   //   path: '**',
   //   renderMode: RenderMode.Server,
